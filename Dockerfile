@@ -1,6 +1,5 @@
 FROM node:10-slim
 
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 # See https://crbug.com/795759
 RUN apt-get update && apt-get install -yq libgconf-2-4
 
@@ -24,7 +23,7 @@ RUN chmod +x /usr/local/bin/dumb-init
 # Uncomment to skip the chromium download when installing puppeteer. If you do,
 # you'll need to launch puppeteer with:
 #     browser.launch({executablePath: 'google-chrome-unstable'})
-# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 RUN groupadd -r pptruser \
     && useradd -r -g pptruser -G audio,video pptruser \
