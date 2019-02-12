@@ -32,9 +32,6 @@ RUN groupadd -r pptruser \
     && useradd -r -g pptruser -G audio,video pptruser \
     && mkdir -p /home/pptruser/Downloads \
     && chown -R pptruser:pptruser /home/pptruser \
-    && chown -R pptruser:pptruser /usr/local/lib/node_modules \
-    && chown -R pptruser:pptruser /project/logs \
-    && chown -R pptruser:pptruser /project/download \
     # fix google-chrome-unstable
     && chown -R pptruser:pptruser /usr/bin/google-chrome-unstable 
 
