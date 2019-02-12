@@ -34,6 +34,8 @@ RUN groupadd -r pptruser \
     && chown -R pptruser:pptruser /home/pptruser \
     # fix google-chrome-unstable
     && chown -R pptruser:pptruser /usr/bin/google-chrome-unstable 
+    && chmod 777 /usr/local/bin/npm \ 
+    && chmod 777 /usr/local/bin/node 
 
 ENTRYPOINT ["dumb-init", "--"]
 
