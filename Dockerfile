@@ -1,8 +1,6 @@
 FROM node:10-slim
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
-ENV PUPPETEER_DOWNLOAD_HOST https://storage.googleapis.com.cnpmjs.org
-
 # See https://crbug.com/795759
 RUN apt-get update && apt-get install -yq libgconf-2-4
 
