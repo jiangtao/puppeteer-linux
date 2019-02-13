@@ -37,6 +37,6 @@ RUN groupadd -r pptruser \
 ENTRYPOINT ["dumb-init", "--"]
 
 # Run everything after as non-privileged user.
-USER pptruser
+# USER pptruser
 
 CMD ["google-chrome-unstable", "--version"]
